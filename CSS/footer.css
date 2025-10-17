@@ -1,0 +1,48 @@
+#footer p {
+    color: white;
+}
+
+#footer {
+    position: relative;
+    margin-top: auto;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#footer-icon{
+    margin: 15px;
+    height: 90px;
+    border-radius: 15px;
+}
+
+#footer div {
+    margin: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer div a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #footer div {
+        margin: 10px 0;
+    }
+
+    #footer-icon{
+        order: 1;
+    }
+}
