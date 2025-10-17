@@ -39,5 +39,6 @@
         <div class="buttonDiv">
             <input type="button" value="Inscription" class="button"/>
         </div>
+        <p>testGit</p>
     </body>
 </html>
