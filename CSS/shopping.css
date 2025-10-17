@@ -1,7 +1,7 @@
 .cardContainer {
     display: flex;
     flex-wrap: wrap;
-    margin: 30px 150px;
+    margin: 30px 50px;
     gap: 30px;
 }
 
@@ -33,6 +33,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.imageTexts h2 {
+    font-size: 20px;
+    width: min-content;
+    text-align: center;
 }
 
 .imageTexts h2::first-letter {

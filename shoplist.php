@@ -39,7 +39,6 @@ $products = $reqProducts->fetchAll(PDO::FETCH_ASSOC);
     </header>
 
     <div>
-
         <div class="cardContainer">
             <?php
         foreach ($products as $product) {
