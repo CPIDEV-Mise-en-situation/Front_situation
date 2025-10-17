@@ -7,10 +7,10 @@
     </head>
     <body>
         <div class="head">
-            <img src="IMG/drapeau_de_lorraine.png" alt="Drapeau de la Lorraine" id="logoLorraine"/>
+            <img src="../IMG/drapeau_de_lorraine.png" alt="Drapeau de la Lorraine" id="logoLorraine"/>
             <div id="headLogo">
-                <img src="IMG/logo_republique_francaise.png" alt="Logo de la république"/>
-                <img src="IMG/logo.png" alt="Logo du site" id="logo"/>
+                <img src="../IMG/logo_republique_francaise.png" alt="Logo de la république"/>
+                <img src="../IMG/logo.png" alt="Logo du site" id="logo"/>
             </div>
             <h2>Bienvenue à la mairie de <br/>Pont-à-Mousson !</h2>
         </div>
