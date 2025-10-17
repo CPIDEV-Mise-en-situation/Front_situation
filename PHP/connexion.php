@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Connexion</title>
-        <link rel="stylesheet" href="CSS/connexion_inscription.css">
+        <link rel="stylesheet" href="../CSS/connexion_inscription.css">
     </head>
     <body>
         <div class="head">
