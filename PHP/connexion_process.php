@@ -20,7 +20,8 @@
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['mail'] = $email;
 
-            echo "success:/index.php"; // redirection côté front
+            header("Location: ../index.php");
+            exit;
         } else {
             http_response_code(401);
             echo "error:Mot de passe incorrect.";

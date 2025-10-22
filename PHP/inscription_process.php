@@ -24,7 +24,8 @@ try {
     $stmt->execute([$password, $name, $surname, $email, $location]);
 
     $_SESSION['email'] = $email;
-    echo "success:/index.php";
+    header("Location: ../index.php");
+    exit;
 
 } catch (PDOException $e) {
     http_response_code(500);
