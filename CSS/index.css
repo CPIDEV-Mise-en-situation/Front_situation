@@ -1,5 +1,6 @@
 body {
     background-color: #F2F2F2;
+<<<<<<< HEAD
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -158,3 +159,81 @@ body {
         margin-top: 20px;
     }
 }
+=======
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.header {
+    margin-top: 2%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header img {
+    height: 100px;
+    border-radius: 25px;
+    margin: 15px;
+    box-shadow: 5px 5px 10px black;
+}
+
+header .nav {
+    display: flex;
+    align-items: center;
+}
+
+header .nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav ul li a:hover {
+    background-color: #FFFF;
+    padding: 8px 15px 8px 15px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 6px black;
+    transition: 0.5s;
+}
+
+header .nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.5s;
+
+}
+
+body {
+    background-color: #F2F2F2;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#page {
+    height: 100vh;
+}
+
+#page #title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#page #title h1 {
+    text-align: center;
+    font-weight: bold;
+    padding: 5%;
+    width: 80%;
+    max-width: 800px;
+}
+
+>>>>>>> Elodie
