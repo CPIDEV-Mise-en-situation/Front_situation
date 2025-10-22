@@ -11,7 +11,7 @@
 //$user = $_ENV['USER'];
 //$password = $_ENV['PASSWORD'];
 
-$host = 'localhost';
+$host = '26.49.11.240';
 $bdd = 'lendprojet';
 $user = 'Administrateur';
 $password = 'FireWall99';
@@ -26,3 +26,4 @@ try {
 } catch (PDOException $e) {
     echo "Database connection failed: " . $e->getMessage();
 }
+?>
