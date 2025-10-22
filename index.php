@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-=======
-<?php 
-
-require 'PHP/config.php'
-
-?>
->>>>>>> Elodie
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/index.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="./CSS/footer.css">
     <link rel="stylesheet" href="./CSS/header.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -44,20 +35,17 @@ require 'PHP/config.php'
             object-fit: contain;
         }
     </style>
-=======
->>>>>>> Elodie
     <title>Mairie - PAM</title>
 </head>
 <body>
     <header class="header">
-<<<<<<< HEAD
         <img src="./img/logo.png" alt="Logo">
         <button class="hamburger">☰</button>
         <nav class="nav">
             <button class="close-btn">✕</button>
             <ul>
                 <li><a href="PHP/shoplist.php">Produit</a></li>
-                <li><a href="">Profil</a></li>
+                <li><a href="PHP/profil.php">Profil</a></li>
                 <li><a href="PHP/connexion.php">Connexion</a></li>
             </ul>
         </nav>
@@ -66,26 +54,10 @@ require 'PHP/config.php'
         <video autoplay muted loop id="background-video">
             <source src="./MEDIA/Vidéo Verdun Meuse2 - Lorraine Tourisme - FR.mp4" type="video/mp4">
         </video>
-=======
-        <img src="./img/logo.png" alt="icon">
-        <button class="hamburger" aria-label="Menu">☰</button>
-        <nav id="navigation">
-            <div class="nav">
-                <ul>
-                    <li><a href="">Produit</a></li>
-                    <li><a href="">Profil</a></li>
-                    <li><a href="">Connexion</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <section id="page">
->>>>>>> Elodie
         <div id="title">
             <h1>MIEUX ÉQUIPÉS POUR MIEUX VOUS ACCOMPAGNER</h1>
         </div>
     </section>
-<<<<<<< HEAD
     <section id="container">
         <div class="carousel-container">
             <div class="swiper">
@@ -141,25 +113,16 @@ require 'PHP/config.php'
 
     <footer id="footer">
         <img src="./IMG/logo.png" alt="Logo" id="footer-icon">
-=======
-    <footer id="footer">
-        <img src="./IMG/logo.png" alt="">
->>>>>>> Elodie
         <div id="contact">
             <ul>
                 <li><p>Contact :</p></li>
                 <li><a href="">19 place du Duroc</a></li>
-<<<<<<< HEAD
                 <li><a href="">54700 Pont-à-Monsson</a></li>
-=======
-                <li><a href="">54700 Pont-à-Monsson - France</a></li>
->>>>>>> Elodie
                 <li><a href="">+33 3 83 81 10 68</a></li>
             </ul>
         </div>
         <div id="infos">
             <ul>
-<<<<<<< HEAD
                 <li><a href="">Mentions légales</a></li>
                 <li><a href="">Accessibilité</a></li>
                 <li><a href="">Gestion des cookies</a></li>
@@ -215,17 +178,3 @@ require 'PHP/config.php'
     </script>
 </body>
 </html>
-=======
-                <li><a href="">Mentions légales - Politique de confidentialité</a></li>
-                <li><a href="">Accessibilité - Plan du site</a></li>
-                <li><a href="">Gestion des cookies</a></li>
-            </ul>
-        </div>
-        <div id="equipe">
-            <p>Team CPIDEV</p>
-        </div>
-    </footer>
-    <script src="./JS/script.js"></script>
-</body>
-</html>
->>>>>>> Elodie

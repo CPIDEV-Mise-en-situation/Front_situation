@@ -5,8 +5,12 @@ require_once __DIR__ . '/config.php';
 $reqUsers = $pdo->prepare("SELECT * FROM users");
 $reqUsers->execute();
 $users = $reqUsers->fetchAll(PDO::FETCH_ASSOC);
-?>
 
+session_start();
+
+$user_id = $_SESSION['id'];
+$user_email = $_SESSION['mail'];
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -38,25 +42,8 @@ $users = $reqUsers->fetchAll(PDO::FETCH_ASSOC);
     </header>
 
     <div>
-        <div class="cardContainer">
-            <?php
-        foreach ($products as $product) {
-            ?>
-            <a href="product.php?id=<?= urlencode($product['id']) ?>" class="cardProductLink">
-                <div class="cardProduct">
-                    <img class="imageProduct" src="../IMG/<?= htmlspecialchars($product["image"]) ?>" alt="<?= htmlspecialchars($product["title"]) ?>" title="<?= htmlspecialchars($product["title"]) ?>">
-                    <div class="imageContent">
-                        <div class="imageTexts">
-                            <h2><?= htmlspecialchars($product["title"]) ?></h2>
-                            <p class="imageTag"><?= htmlspecialchars($product["status"]) ?></p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <?php
-        }
-        ?>
-        </div>
+        <p><?= $user_email ?></p>
+        <p><?= $user_id ?></p>
     </div>
 
     <footer id="footer">

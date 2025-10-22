@@ -11,17 +11,10 @@
 //$user = $_ENV['USER'];
 //$password = $_ENV['PASSWORD'];
 
-<<<<<<< HEAD
 $host = 'localhost';    
 $bdd = 'lendprojet';
 $user = 'root';
 $password = '';
-=======
-$host = '26.49.11.240';
-$bdd = 'lendprojet';
-$user = 'Administrateur';
-$password = 'FireWall99';
->>>>>>> Elodie
 
 try {
     $dsn = "mysql:host=$host;dbname=$bdd;charset=utf8mb4";
@@ -29,14 +22,6 @@ try {
 
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-<<<<<<< HEAD
 } catch (PDOException $e) {
     echo "Database connection failed: " . $e->getMessage();
 }
-=======
-    echo "Database connection successful!";
-} catch (PDOException $e) {
-    echo "Database connection failed: " . $e->getMessage();
-}
-?>
->>>>>>> Elodie
