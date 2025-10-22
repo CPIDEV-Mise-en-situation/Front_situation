@@ -43,15 +43,17 @@ $products = $reqProducts->fetchAll(PDO::FETCH_ASSOC);
             <?php
         foreach ($products as $product) {
             ?>
-            <div class="cardProduct">
-                <img class="imageProduct" src="./IMG/<?= htmlspecialchars($product["image"]) ?>" alt="<?= htmlspecialchars($product["title"]) ?>" title="<?= htmlspecialchars($product["title"]) ?>">
-                <div class="imageContent">
-                    <div class="imageTexts">
-                        <h2><?= htmlspecialchars($product["title"]) ?></h2>
-                        <p class="imageTag"><?= htmlspecialchars($product["status"]) ?></p>
+            <a href="product.php?id=<?= urlencode($product['id']) ?>" class="cardProductLink">
+                <div class="cardProduct">
+                    <img class="imageProduct" src="./IMG/<?= htmlspecialchars($product["image"]) ?>" alt="<?= htmlspecialchars($product["title"]) ?>" title="<?= htmlspecialchars($product["title"]) ?>">
+                    <div class="imageContent">
+                        <div class="imageTexts">
+                            <h2><?= htmlspecialchars($product["title"]) ?></h2>
+                            <p class="imageTag"><?= htmlspecialchars($product["status"]) ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <?php
         }
         ?>
