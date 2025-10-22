@@ -7,7 +7,7 @@
 
     try {
     // Préparer la requête pour récupérer l'utilisateur par email ou username
-    $stmt = $pdo->prepare("SELECT id, password FROM users WHERE username = ?");
+    $stmt = $pdo->prepare("SELECT id, password FROM users WHERE email = ?");
     $stmt->execute([$email]);
 
     // Vérifier si l'utilisateur existe
