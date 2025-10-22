@@ -2,17 +2,17 @@
     include "./config.php";
     session_start();
 
-    $email = trim($_POST['email']);
+    $mail = trim($_POST['mail']);
     $password = trim($_POST['password']);
 
-    try {
-    // Préparer la requête pour récupérer l'utilisateur par email ou username
-    $stmt = $pdo->prepare("SELECT id, password FROM users WHERE email = ?");
-    $stmt->execute([$email]);
+    $stmt = $conn->prepare("SELECT id, mail, password FROM users WHERE username = ?");
+    $stmt->bind_param("s", $mail);
+    $stmt->execute();
+    $stmt->store_result();
 
-    // Vérifier si l'utilisateur existe
-    if ($stmt->rowCount() === 1) {
-        $user = $stmt->fetch(PDO::FETCH_ASSOC); // tableau associatif
+    if ($stmt->num_rows === 1) {
+        $stmt->bind_result($id, $user, $password);
+        $stmt->fetch();
 
         // Vérifier le mot de passe
         if (password_verify($password, $user['password'])) {
@@ -22,8 +22,10 @@
             $_SESSION['name'] = $user['name'];
             $_SESSION['surname'] = $user['surname'];
 
-            header("Location: ../index.php");
-            exit;
+        if (trim($decryptedPassword) === trim($password)) {
+            $_SESSION['id'] = $id;
+            $_SESSION['mail'] = $user;
+            echo "success:/index.php"; // ou autre redirection
         } else {
             http_response_code(401);
             echo "error:Mot de passe incorrect.";
@@ -33,8 +35,6 @@
         echo "error:Nom d'utilisateur introuvable.";
     }
 
-} catch (PDOException $e) {
-    http_response_code(500);
-    echo "error:Erreur lors de la connexion : " . $e->getMessage();
-}
+    $stmt->close();
+    $conn->close();
 ?>
