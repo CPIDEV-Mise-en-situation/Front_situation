@@ -18,7 +18,9 @@
         if (password_verify($password, $user['password'])) {
             // Mot de passe correct : créer la session
             $_SESSION['user_id'] = $user['id'];
-            $_SESSION['mail'] = $email;
+            $_SESSION['email'] = $email;
+            $_SESSION['name'] = $user['name'];
+            $_SESSION['surname'] = $user['surname'];
 
             header("Location: ../index.php");
             exit;
