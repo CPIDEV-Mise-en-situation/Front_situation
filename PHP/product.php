@@ -33,7 +33,7 @@ if (!$product) {
                 <ul>
                     <li><a href="shoplist.php">Produit</a></li>
                     <li><a href="">Profil</a></li>
-                    <li><a href="PHP/connexion.php">Connexion</a></li>
+                    <li><a href="connexion.php">Connexion</a></li>
                 </ul>
             </div>
         </nav>
