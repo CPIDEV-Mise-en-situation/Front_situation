@@ -12,12 +12,12 @@
                 <img src="../IMG/logo_republique_francaise.png" alt="Logo de la république"/>
                 <img src="../IMG/logo.png" alt="Logo du site" id="logo"/>
             </div>
-            <h2>Bienvenue à la mairie de <br/>Pont-à-Mousson !</h2>
+            <h2>Bienvenue à la mairie de <br/>Verdun !</h2>
         </div>
 
         <div class="form">
             <h1>Inscription: </h1>
-            <form action="">
+            <form id="inscriptionForm" action="./inscription_process" method="post">
                 <div class="infos">
                     <div class="divInfos">
                         <label for="nom">Nom</label>
@@ -33,11 +33,15 @@
                 <label for="mail">Mail</label>
                 <input type="email" name="mail" id="mail" class="textBox"/>
                 <label for="mdp">Mot de passe</label>
-                <input type="password" name="mdp" id="mdp" class="textBox"/>
+                <input type="password" name="mdp" id="password" class="textBox"/>
+                <div class="buttonDiv">
+                    <input type="submit" value="Inscription" class="button"/>
+                </div>
             </form>
         </div>
-        <div class="buttonDiv">
-            <input type="button" value="Inscription" class="button"/>
+
+        <div id="liens">
+            <a href="./connexion.php">Déjà inscrit ? Connexion</a>
         </div>
     </body>
 </html>
