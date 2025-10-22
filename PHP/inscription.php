@@ -7,41 +7,37 @@
     </head>
     <body>
         <div class="head">
-            <img src="../IMG/drapeau_de_lorraine.png" alt="Drapeau de la Lorraine" id="logoLorraine"/>
+            <img src="IMG/drapeau_de_lorraine.png" alt="Drapeau de la Lorraine" id="logoLorraine"/>
             <div id="headLogo">
-                <img src="../IMG/logo_republique_francaise.png" alt="Logo de la république"/>
-                <img src="../IMG/logo.png" alt="Logo du site" id="logo"/>
+                <img src="IMG/logo_republique_francaise.png" alt="Logo de la république"/>
+                <img src="IMG/logo.png" alt="Logo du site" id="logo"/>
             </div>
-            <h2>Bienvenue à la mairie de <br/>Verdun !</h2>
+            <h2>Bienvenue à la mairie de <br/>Pont-à-Mousson !</h2>
         </div>
 
         <div class="form">
             <h1>Inscription: </h1>
-            <form id="inscriptionForm" action="./inscription_process.php" method="post">
+            <form action="">
                 <div class="infos">
                     <div class="divInfos">
-                        <label for="name">Nom</label>
-                        <input type="text" name="name" id="name" class="textBox"/>
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" id="nom" class="textBox"/>
                     </div>
                     <div class="divInfos">
-                        <label for="surname">Prénom</label>
-                        <input type="text" name="surname" id="surname" class="textBox"/>
+                        <label for="prenom">Prénom</label>
+                        <input type="text" name="prenom" id="prenom" class="textBox"/>
                     </div>
                 </div>
-                <label for="location">Adresse</label>
-                <input type="text" name="location" id="location" class="textBox"/>
-                <label for="email">Mail</label>
-                <input type="email" name="email" id="email" class="textBox"/>
-                <label for="password">Mot de passe</label>
-                <input type="password" name="password" id="password" class="textBox"/>
-                <div class="buttonDiv">
-                    <input type="submit" value="Inscription" class="button"/>
-                </div>
+                <label for="adresse">Adresse</label>
+                <input type="text" name="adresse" id="adresse" class="textBox"/>
+                <label for="mail">Mail</label>
+                <input type="email" name="mail" id="mail" class="textBox"/>
+                <label for="mdp">Mot de passe</label>
+                <input type="password" name="mdp" id="mdp" class="textBox"/>
             </form>
         </div>
-
-        <div id="liens">
-            <a href="./connexion.php">Déjà inscrit ? Connexion</a>
+        <div class="buttonDiv">
+            <input type="button" value="Inscription" class="button"/>
         </div>
     </body>
 </html>
