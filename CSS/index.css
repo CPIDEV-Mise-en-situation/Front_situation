@@ -1,5 +1,5 @@
 body {
-    background: #000;
+    background: #eae9e9;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -55,15 +55,15 @@ body {
     box-shadow: var(--glass-shadow-hover), var(--glass-inset-shadow);
     transform: translateY(-2px);
 }
-/* Conteneur principal (bleu) */
+
 #container {
     position: relative;
     display: flex;
-    max-width: 1200px;
+    max-width: 95%;
     margin: 40px auto;
     padding: 20px;
     gap: 30px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.795);
     border-radius: var(--border-radius);
     box-shadow: var(--glass-shadow), var(--glass-inset-shadow);
     border: var(--glass-border);
@@ -80,15 +80,22 @@ body {
 .carousel-container {
     width: 60%;
     background: transparent;
+    box-shadow: var(--glass-shadow), var(--glass-inset-shadow);
     border-radius: var(--border-radius);
     padding: 0;
     box-shadow: none;
     border: none;
+    color: black;
 }
+
+.carousel-container h2 {
+    color: black;
+}
+
 .swiper-slide {
-    background: var(--chouille);
-    border-radius: var(--border-radius);
     padding: 0;
+    background: var(--container-bg);
+    border-radius: var(--border-radius);
     border: var(--glass-border);
     backdrop-filter: blur(var(--glass-blur)) saturate(180%);
     transition: var(--transition);
@@ -98,7 +105,6 @@ body {
     align-items: center;
 }
 .swiper-slide:hover {
-    background: var(--chouille);
     border-radius: var(--border-radius);
     /* border: var(--glass-border-hover); */
     transform: translateY(-2px);
@@ -149,9 +155,9 @@ body {
     border: none;
     border-radius: 12px;
 }
-/* Section "À propos" (violet) */
+
 .about-section {
-    max-width: 1200px;
+    max-width: 95%;
     margin: 60px auto;
     padding: 0 20px;
     text-align: center;
@@ -178,22 +184,23 @@ body {
     box-shadow: var(--glass-shadow-hover), var(--glass-inset-shadow);
     transform: translateY(-2px);
 }
-/* Section partenaires (vert) */
+
 .partners-section {
     padding: 40px 20px;
-    background: var(--partners-bg);
+    background: linear-gradient(90deg, var(--partners-bg) 0%, var(--partners-bg-d) 100%);
     border-radius: var(--border-radius);
     box-shadow: var(--glass-shadow), var(--glass-inset-shadow);
     border: var(--glass-border);
     backdrop-filter: blur(var(--glass-blur)) saturate(180%);
     transition: var(--transition);
-    max-width: 1200px;
+    max-width: 95%;
     margin: 0 auto;
 }
 .partners-section h2 {
+    text-align: center;
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    color: white;
     background-image: var(--partners-gradient);
 }
 .partners-section:hover {
@@ -219,6 +226,7 @@ body {
     filter: grayscale(100%);
     transition: filter 0.3s ease;
     background: none;
+    border: none;
 }
 .partner-card img:hover {
     filter: grayscale(0%);
@@ -226,7 +234,7 @@ body {
 /* Boutons du carousel */
 .swiper-button-next,
 .swiper-button-prev {
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(213, 213, 213, 0.475) !important;
     border: var(--glass-border) !important;
     backdrop-filter: blur(var(--glass-blur)) saturate(180%) !important;
     transition: var(--transition) !important;
