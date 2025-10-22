@@ -18,10 +18,10 @@
         <div class="form">
             <h1>Connexion: </h1>
             <form action="">
-                <label for="mail">Mail</label>
-                <input type="email" name="mail" id="mail" class="textBox"/>
+                <label for="email">Mail</label>
+                <input type="email" name="email" id="email" class="textBox"/>
                 <label for="mdp">Mot de passe</label>
-                <input type="password" name="mdp" id="mdp" class="textBox"/>
+                <input type="password" name="password" id="password" class="textBox"/>
             </form>
         </div>
         <div class="buttonDiv">
