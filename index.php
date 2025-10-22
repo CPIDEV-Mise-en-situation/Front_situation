@@ -18,9 +18,9 @@
         <nav class="nav">
             <button class="close-btn">✕</button>
             <ul>
-                <li><a href="">Produit</a></li>
-                <li><a href="">Profil</a></li>
-                <li><a href="">Connexion</a></li>
+                <li><a href="./PHP/product.php">Produit</a></li>
+                <li><a href="./PHP/profil.php">Profil</a></li>
+                <li><a href="./PHP/connexion.php">Connexion</a></li>
             </ul>
         </nav>
     </header>
@@ -35,17 +35,12 @@
         </div>
 
     </section>
-    <div class="wave-wrapper">
-        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
-            <path d="M0,60 C320,120 640,20 960,70 C1280,120 1440,30 1440,60 L1440,120 L0,120 Z" fill="white"></path>
-        </svg>
-    </div>
 
     <!-- Conteneur principal avec carousel et carte -->
     <section id="container">
         <div class="carousel-container">
             <div class="swiper">
-                <h2>Nos salles des fêtes</h2>
+                <h2>🥳 Nos salles des fêtes</h2>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="swiper-slide-content">
@@ -79,17 +74,11 @@
         </div>
     </section>
 
-        <div class="wave-wrapper">
-            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,60 C320,120 640,20 960,70 C1280,120 1440,30 1440,60 L1440,120 L0,120 Z" fill="white"></path>
-            </svg>
-        </div>
-
     <!-- Section "À propos" -->
     <section class="about-section">
 
         <div class="about-content">
-            <h2>À propos de nous</h2>
+            <h2>💬 À propos de nous</h2>
             <p>
                 Nous mettons à votre disposition des infrastructures modernes et accessibles pour tous vos événements.
                 Nos salles sont équipées pour répondre à vos besoins, que ce soit pour des réunions, des célébrations ou des activités culturelles.
@@ -98,18 +87,18 @@
         </div>
     </section>
 
-    <div class="wave-wrapper">
+    <!-- <div class="wave-wrapper">
         <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
             <path d="M0,60 C320,120 640,20 960,70 C1280,120 1440,30 1440,60 L1440,120 L0,120 Z" fill="white"></path>
         </svg>
-    </div>
+    </div> -->
 
     <!-- Séparateur -->
     <section class="separator"></section>
 
     <!-- Section partenaires -->
     <section class="partners-section">
-        <h2 class="partners-title">Nos Partenaires</h2>
+        <h2 class="partners-title">🤝 Nos Partenaires</h2>
         <div class="partners-swiper swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -155,11 +144,6 @@
             </div>
         </div>
     </section>
-        <div class="wave-wrapper">
-            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,60 C320,120 640,20 960,70 C1280,120 1440,30 1440,60 L1440,120 L0,120 Z" fill="white"></path>
-            </svg>
-        </div>
 
     <!-- Pied de page -->
     <footer id="footer">

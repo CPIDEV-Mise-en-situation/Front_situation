@@ -1,11 +1,12 @@
-body {
-    background: #eae9e9;
+body {  
+    background: #f1f1f1;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     color: white;
     overflow-x: hidden;
 }
+
 /* Section principale */
 #page {
     position: relative;
@@ -28,7 +29,8 @@ body {
     z-index: -1;
     filter: brightness(0.5);
 }
-/* Titre principal avec dégradé bleu/rouge */
+
+/* Titre principal */
 #page #title h1 {
     font-size: 3.5rem;
     font-weight: 800;
@@ -39,7 +41,7 @@ body {
     box-shadow: var(--glass-shadow), var(--glass-inset-shadow);
     border: var(--glass-border);
     backdrop-filter: blur(var(--glass-blur)) saturate(180%);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0);
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     position: relative;
@@ -49,6 +51,7 @@ body {
     color: transparent;
     background-image: var(--title-gradient);
 }
+
 #page #title h1:hover {
     backdrop-filter: blur(var(--glass-blur-hover)) saturate(200%);
     border: var(--glass-border-hover);
@@ -71,25 +74,31 @@ body {
     transition: var(--transition);
     overflow: hidden;
 }
+
 #container:hover {
     backdrop-filter: blur(var(--glass-blur-hover)) saturate(200%);
     border: var(--glass-border-hover);
     box-shadow: var(--glass-shadow-hover), var(--glass-inset-shadow);
     transform: translateY(-2px);
 }
+
+/* Carousel & Swiper */
 .carousel-container {
-    width: 60%;
+    width: 50%;
     background: transparent;
-    box-shadow: var(--glass-shadow), var(--glass-inset-shadow);
+    box-shadow: none;
     border-radius: var(--border-radius);
     padding: 0;
-    box-shadow: none;
     border: none;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-container h2 {
     color: black;
+    text-align: center;
 }
 
 .swiper-slide {
@@ -103,24 +112,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 300px; /* Hauteur fixe pour uniformité */
 }
+
 .swiper-slide:hover {
-    border-radius: var(--border-radius);
-    /* border: var(--glass-border-hover); */
     transform: translateY(-2px);
 }
+
 .swiper-slide img {
-    width: 75%;
-    height: 250px;
-    object-fit: cover;
+    width: auto;
+    max-width: 90%;
+    max-height: 255px;
+    object-fit: contain; /* Centrage parfait sans déformation */
     border-radius: 12px;
-    margin: 0;
+    margin: 0 auto; /* Centrage horizontal */
 }
+
 .swiper-slide-content {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
     text-align: center;
     padding: 20px;
 }
+
 .swiper-slide h3 {
     margin: 15px 0 10px;
     font-family: 'Montserrat', sans-serif;
@@ -130,10 +147,11 @@ body {
     color: transparent;
     background-image: var(--section-gradient);
 }
-/* Carte Google Maps (rouge) */
+
+/* Google Maps */
 .maps {
     padding: 10px;
-    width: 40%;
+    width: 50%;
     height: 450px;
     background: var(--maps-bg);
     border-radius: var(--border-radius);
@@ -143,25 +161,29 @@ body {
     transition: var(--transition);
     overflow: hidden;
 }
+
 .maps:hover {
     backdrop-filter: blur(var(--glass-blur-hover)) saturate(200%);
     border: var(--glass-border-hover);
     box-shadow: var(--glass-shadow-hover), var(--glass-inset-shadow);
     transform: translateY(-2px);
 }
+
 .maps iframe {
     width: 100%;
     height: 100%;
-    border: none;
+    border: var(--glass-border);
     border-radius: 12px;
 }
 
+/* Section À propos */
 .about-section {
     max-width: 95%;
     margin: 60px auto;
     padding: 0 20px;
     text-align: center;
 }
+
 .about-content {
     background: var(--about-bg);
     padding: 30px;
@@ -172,12 +194,18 @@ body {
     transition: var(--transition);
     margin: 0 auto;
 }
+
 .about-content h2 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     background-image: var(--about-gradient);
 }
+
+.about-content p {
+    color: black;
+}
+
 .about-content:hover {
     backdrop-filter: blur(var(--glass-blur-hover)) saturate(200%);
     border: var(--glass-border-hover);
@@ -185,6 +213,7 @@ body {
     transform: translateY(-2px);
 }
 
+/* Section Partenaires */
 .partners-section {
     padding: 40px 20px;
     background: linear-gradient(90deg, var(--partners-bg) 0%, var(--partners-bg-d) 100%);
@@ -195,20 +224,23 @@ body {
     transition: var(--transition);
     max-width: 95%;
     margin: 0 auto;
-}
-.partners-section h2 {
     text-align: center;
+}
+
+.partners-section h2 {
     background-clip: text;
     -webkit-background-clip: text;
     color: white;
     background-image: var(--partners-gradient);
 }
+
 .partners-section:hover {
     backdrop-filter: blur(var(--glass-blur-hover)) saturate(200%);
     border: var(--glass-border-hover);
     box-shadow: var(--glass-shadow-hover), var(--glass-inset-shadow);
     transform: translateY(-2px);
 }
+
 .partner-card {
     width: 100%;
     height: auto;
@@ -219,6 +251,7 @@ body {
     border: none;
     padding: 10px;
 }
+
 .partner-card img {
     max-height: 100px;
     max-width: 100%;
@@ -228,9 +261,11 @@ body {
     background: none;
     border: none;
 }
+
 .partner-card img:hover {
     filter: grayscale(0%);
 }
+
 /* Boutons du carousel */
 .swiper-button-next,
 .swiper-button-prev {
@@ -238,14 +273,19 @@ body {
     border: var(--glass-border) !important;
     backdrop-filter: blur(var(--glass-blur)) saturate(180%) !important;
     transition: var(--transition) !important;
-    border-radius: 15px;
+    border-radius: 7px;
+    width: 40px;
+    height: 40px;
     padding: 5px;
+    color: #6c5ce7 !important;
 }
+
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background: rgba(255, 255, 255, 0.2) !important;
+    background: rgba(255, 255, 255, 0.4) !important;
     border: var(--glass-border-hover) !important;
 }
+
 /* Responsive */
 @media (max-width: 768px) {
     #container {
@@ -262,10 +302,13 @@ body {
         font-size: 2.5rem;
         padding: 20px;
     }
+    .swiper-slide {
+        height: 250px;
+    }
 }
 
-
-.wave-wrapper {
+/* Animation d'onde */
+/* .wave-wrapper {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -279,4 +322,4 @@ body {
     width: calc(100% + 1.3px);
     height: 100px;
     display: block;
-}
+} */
