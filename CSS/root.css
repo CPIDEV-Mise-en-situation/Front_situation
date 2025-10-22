@@ -1,0 +1,25 @@
+:root {
+    --glass-blur: 10px;
+    --glass-blur-hover: 15px;
+    --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+    --glass-border-hover: 1px solid rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --glass-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+    --glass-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+    --glass-tint: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.1) 100%);
+    --glass-shine: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%, rgba(255, 255, 255, 0.1) 100%);
+    --border-radius: 18px;
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+
+    --container-bg: rgba(154, 154, 154, 0.097);
+    --chouille:rgba(168, 168, 168, 0.079);
+    --maps-bg: rgba(244, 67, 54, 0.15);
+    --about-bg: rgba(0, 0, 0, 0.2);
+    --partners-bg: rgba(34, 197, 94, 0.15);
+    --slide-bg: rgba(255, 255, 255, 0.05);
+
+    --title-gradient: linear-gradient(90deg, #007AFF, #FF2D55);
+    --section-gradient: linear-gradient(90deg, #007AFF, #AF52DE);
+    --about-gradient: linear-gradient(90deg, #AF52DE, #FF2D55);
+    --partners-gradient: linear-gradient(90deg, #34C759, #00D4FF);
+}

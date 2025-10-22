@@ -6,35 +6,9 @@
     <link rel="stylesheet" href="./CSS/index.css">
     <link rel="stylesheet" href="./CSS/footer.css">
     <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/root.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <style>
-        /* Style pour la section des partenaires */
-        .partners-section {
-            padding: 20px;
-            background-color: #f8f8f8;
-            text-align: center;
-        }
-        .partners-title {
-            margin-bottom: 20px;
-            font-size: 1.5em;
-            color: #333;
-        }
-        .partners-swiper {
-            max-width: 100%;
-            height: auto;
-        }
-        .partners-swiper .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px;
-        }
-        .partners-swiper img {
-            max-height: 80px;
-            max-width: 150px;
-            object-fit: contain;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <title>Mairie - PAM</title>
 </head>
 <body>
@@ -50,6 +24,8 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Section avec vidéo et titre -->
     <section id="page">
         <video autoplay muted loop id="background-video">
             <source src="./MEDIA/Vidéo Verdun Meuse2 - Lorraine Tourisme - FR.mp4" type="video/mp4">
@@ -57,10 +33,19 @@
         <div id="title">
             <h1>MIEUX ÉQUIPÉS POUR MIEUX VOUS ACCOMPAGNER</h1>
         </div>
+
     </section>
+    <div class="wave-wrapper">
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C320,120 640,20 960,70 C1280,120 1440,30 1440,60 L1440,120 L0,120 Z" fill="white"></path>
+        </svg>
+    </div>
+
+    <!-- Conteneur principal avec carousel et carte -->
     <section id="container">
         <div class="carousel-container">
             <div class="swiper">
+                <h2>Nos salles des fêtes</h2>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="swiper-slide-content">
@@ -94,23 +79,89 @@
         </div>
     </section>
 
+        <div class="wave-wrapper">
+            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C320,120 640,20 960,70 C1280,120 1440,30 1440,60 L1440,120 L0,120 Z" fill="white"></path>
+            </svg>
+        </div>
+
+    <!-- Section "À propos" -->
+    <section class="about-section">
+
+        <div class="about-content">
+            <h2>À propos de nous</h2>
+            <p>
+                Nous mettons à votre disposition des infrastructures modernes et accessibles pour tous vos événements.
+                Nos salles sont équipées pour répondre à vos besoins, que ce soit pour des réunions, des célébrations ou des activités culturelles.
+                Situées au cœur de Verdun et ses alentours, elles offrent un cadre idéal pour chaque occasion.
+            </p>
+        </div>
+    </section>
+
+    <div class="wave-wrapper">
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C320,120 640,20 960,70 C1280,120 1440,30 1440,60 L1440,120 L0,120 Z" fill="white"></path>
+        </svg>
+    </div>
+
+    <!-- Séparateur -->
+    <section class="separator"></section>
+
+    <!-- Section partenaires -->
     <section class="partners-section">
         <h2 class="partners-title">Nos Partenaires</h2>
         <div class="partners-swiper swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./IMG/Partenaire/france-lef.png" alt="Partenaire 1"></div>
-                <div class="swiper-slide"><img src="./IMG/Partenaire/GIP.png" alt="Partenaire 2"></div>
-                <div class="swiper-slide"><img src="./IMG/Partenaire/Grand Est.png" alt="Partenaire 3"></div>
-                <div class="swiper-slide"><img src="./IMG/Partenaire/Leader.png" alt="Partenaire 4"></div>
-                <div class="swiper-slide"><img src="./IMG/Partenaire/Meuse.png" alt="Partenaire 5"></div>
-                <div class="swiper-slide"><img src="./IMG/Partenaire/Mewo.png" alt="Partenaire 6"></div>
-                <div class="swiper-slide"><img src="./IMG/Partenaire/prefet.png" alt="Partenaire 7"></div>
-                <div class="swiper-slide"><img src="./IMG/Partenaire/UE.png" alt="Partenaire 8"></div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="./IMG/Partenaire/france-lef.png" alt="Partenaire 1">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="./IMG/Partenaire/GIP.png" alt="Partenaire 2">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="./IMG/Partenaire/Grand Est.png" alt="Partenaire 3">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="./IMG/Partenaire/Leader.png" alt="Partenaire 4">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="./IMG/Partenaire/Meuse.png" alt="Partenaire 5">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="./IMG/Partenaire/Mewo.png" alt="Partenaire 6">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="./IMG/Partenaire/prefet.png" alt="Partenaire 7">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="./IMG/Partenaire/UE.png" alt="Partenaire 8">
+                    </div>
+                </div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
     </section>
+        <div class="wave-wrapper">
+            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C320,120 640,20 960,70 C1280,120 1440,30 1440,60 L1440,120 L0,120 Z" fill="white"></path>
+            </svg>
+        </div>
 
+    <!-- Pied de page -->
     <footer id="footer">
         <img src="./IMG/logo.png" alt="Logo" id="footer-icon">
         <div id="contact">
@@ -130,51 +181,20 @@
         </div>
         <div id="equipe"><p>Team CPIDEV</p></div>
     </footer>
+
+    <!-- SVG pour l'effet de distortion (Liquid Glass) -->
+    <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+        <defs>
+            <filter id="glass-distortion">
+                <feTurbulence type="fractalNoise" baseFrequency="0.02 0.05" numOctaves="2" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./JS/header.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Carousel des salles
-            new Swiper('.carousel-container .swiper', {
-                loop: true,
-                slidesPerView: 1,
-                centeredSlides: true,
-                spaceBetween: 30,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.carousel-container .swiper-pagination',
-                    clickable: true,
-                },
-                autoplay: {
-                    delay: 5000,
-                },
-            });
-
-            // Carousel des partenaires
-            new Swiper('.partners-swiper', {
-                loop: true,
-                slidesPerView: 3, // Affiche 3 logos à la fois
-                spaceBetween: 20,
-                autoplay: {
-                    delay: 3000,
-                },
-                pagination: {
-                    el: '.partners-swiper .swiper-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 4,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                    },
-                },
-            });
-        });
-    </script>
+    <script src="./JS/carouselles.js"></script>
 </body>
 </html>
