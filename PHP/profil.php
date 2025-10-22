@@ -1,4 +1,9 @@
 <?php
+session_start();
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
+
 
 require_once __DIR__ . '/config.php';
 
@@ -6,7 +11,6 @@ $reqUsers = $pdo->prepare("SELECT * FROM users");
 $reqUsers->execute();
 $users = $reqUsers->fetchAll(PDO::FETCH_ASSOC);
 
-session_start();
 
 $user_id = $_SESSION['id'];
 $user_email = $_SESSION['mail'];
