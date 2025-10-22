@@ -17,22 +17,14 @@
 
         <div class="form">
             <h1>Connexion: </h1>
-<<<<<<< HEAD
-            <form action="">
+            <form id="loginForm" action="./connexion_process.php" method="post">
                 <label for="email">Mail</label>
                 <input type="email" name="email" id="email" class="textBox"/>
-                <label for="mdp">Mot de passe</label>
+                <label for="password">Mot de passe</label>
                 <input type="password" name="password" id="password" class="textBox"/>
-=======
-            <form id="loginForm" action="./connexion_process.php" method="post">
-                <label for="mail">Mail</label>
-                <input type="email" name="mail" id="mail" class="textBox"/>
-                <label for="mdp">Mot de passe</label>
-                <input type="password" name="mdp" id="password" class="textBox"/>
                 <div class="buttonDiv">
                     <input type="submit" value="Connexion" class="button"/>
                 </div>
->>>>>>> c96685489fd374afc145b67144eb9c9b5b5786af
             </form>
         </div>
 

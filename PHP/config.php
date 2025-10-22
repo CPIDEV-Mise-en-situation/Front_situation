@@ -11,10 +11,10 @@
 //$user = $_ENV['USER'];
 //$password = $_ENV['PASSWORD'];
 
-$host = 'localhost';    
+$host = '26.49.11.240';    
 $bdd = 'lendprojet';
-$user = 'root';
-$password = '';
+$user = 'Elodie';
+$password = 'Elodie123';
 
 try {
     $dsn = "mysql:host=$host;dbname=$bdd;charset=utf8mb4";
