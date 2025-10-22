@@ -17,23 +17,23 @@
 
         <div class="form">
             <h1>Inscription: </h1>
-            <form id="inscriptionForm" action="./inscription_process" method="post">
+            <form id="inscriptionForm" action="./inscription_process.php" method="post">
                 <div class="infos">
                     <div class="divInfos">
-                        <label for="nom">Nom</label>
-                        <input type="text" name="nom" id="nom" class="textBox"/>
+                        <label for="name">Nom</label>
+                        <input type="text" name="name" id="name" class="textBox"/>
                     </div>
                     <div class="divInfos">
-                        <label for="prenom">Prénom</label>
-                        <input type="text" name="prenom" id="prenom" class="textBox"/>
+                        <label for="surname">Prénom</label>
+                        <input type="text" name="surname" id="surname" class="textBox"/>
                     </div>
                 </div>
-                <label for="adresse">Adresse</label>
-                <input type="text" name="adresse" id="adresse" class="textBox"/>
-                <label for="mail">Mail</label>
-                <input type="email" name="mail" id="mail" class="textBox"/>
-                <label for="mdp">Mot de passe</label>
-                <input type="password" name="mdp" id="password" class="textBox"/>
+                <label for="location">Adresse</label>
+                <input type="text" name="location" id="location" class="textBox"/>
+                <label for="email">Mail</label>
+                <input type="email" name="email" id="email" class="textBox"/>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="password" class="textBox"/>
                 <div class="buttonDiv">
                     <input type="submit" value="Inscription" class="button"/>
                 </div>
