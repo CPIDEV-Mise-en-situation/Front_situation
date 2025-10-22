@@ -14,7 +14,13 @@
         $stmt->bind_result($id, $user, $password);
         $stmt->fetch();
 
-        $decryptedPassword = password_verify($password, $user['password']);
+        // Vérifier le mot de passe
+        if (password_verify($password, $user['password'])) {
+            // Mot de passe correct : créer la session
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['email'] = $email;
+            $_SESSION['name'] = $user['name'];
+            $_SESSION['surname'] = $user['surname'];
 
         if (trim($decryptedPassword) === trim($password)) {
             $_SESSION['id'] = $id;
