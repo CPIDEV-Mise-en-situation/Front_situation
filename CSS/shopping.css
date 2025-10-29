@@ -1,0 +1,53 @@
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 50px;
+    gap: 30px;
+}
+
+.cardProduct {
+    display: flex;
+    position: relative;
+    border-radius: 25px;
+}
+
+.imageProduct {
+    border-radius: 20px;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    position: inherit;
+}
+
+.imageContent {
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(0,0,0, 0.7);
+    color: white;
+    width: 300px;
+    height: 96px;
+    border-radius: 0 0px 25px 25px;
+}
+
+.imageTexts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imageTexts h2 {
+    font-size: 20px;
+    width: min-content;
+    text-align: center;
+}
+
+.imageTag {
+    background-color: #00ff00;
+    border-radius: 20px;
+    width: 100px;
+    height: 25px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
