@@ -1,3 +1,8 @@
+<?php
+session_start();
+$user_id = $_SESSION['id'] ?? null;
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -45,8 +50,16 @@
             <button class="close-btn">✕</button>
             <ul>
                 <li><a href="PHP/shoplist.php">Produit</a></li>
-                <li><a href="PHP/profil.php">Profil</a></li>
-                <li><a href="PHP/connexion.php">Connexion</a></li>
+                <?php 
+                
+                if (isset($user_id)) {
+                    echo '<li><a href="PHP/profil.php">Profil</a></li>';
+                    echo '<li><a href="PHP/logout.php">Déconnexion</a></li>';
+                } else {
+                    echo '<li><a href="PHP/connexion.php">Connexion</a></li>';
+                }
+
+                ?>
             </ul>
         </nav>
     </header>

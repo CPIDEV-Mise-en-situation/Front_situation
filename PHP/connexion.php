@@ -20,7 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
 
         if (password_verify($password, $user['password'])) {
-            // Connexion réussie
             $_SESSION['id'] = $user['id'];
             $_SESSION['nom'] = $user['name'];
             $_SESSION['prenom'] = $user['surname'];
@@ -30,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
             // Redirection ou message
-            header('Location: index.php'); // ou autre page d'accueil
+            header('Location: profil.php');
             exit;
         } else {
             $error = "Email ou mot de passe incorrect.";

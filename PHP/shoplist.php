@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once __DIR__ . '/config.php';
 
@@ -9,6 +10,8 @@ $users = $reqUsers->fetchAll(PDO::FETCH_ASSOC);
 $reqProducts = $pdo->prepare("SELECT * FROM products");
 $reqProducts->execute();
 $products = $reqProducts->fetchAll(PDO::FETCH_ASSOC);
+
+$user_id = $_SESSION['id'] ?? null;
 ?>
 
 
@@ -33,9 +36,17 @@ $products = $reqProducts->fetchAll(PDO::FETCH_ASSOC);
         <nav id="navigation">
             <div class="nav">
                 <ul>
-                    <li><a href="">Produit</a></li>
-                    <li><a href="">Profil</a></li>
-                    <li><a href="PHP/connexion.php">Connexion</a></li>
+                    <li><a href="shoplist.php">Produit</a></li>
+                    <?php 
+                    
+                    if (isset($user_id)) {
+                        echo '<li><a href="profil.php">Profil</a></li>';
+                        echo '<li><a href="logout.php">Déconnexion</a></li>';
+                    } else {
+                        echo '<li><a href="connexion.php">Connexion</a></li>';
+                    }
+
+                    ?>
                 </ul>
             </div>
         </nav>
@@ -51,7 +62,7 @@ $products = $reqProducts->fetchAll(PDO::FETCH_ASSOC);
                     <img class="imageProduct" src="../IMG/<?= htmlspecialchars($product["image"]) ?>" alt="<?= htmlspecialchars($product["title"]) ?>" title="<?= htmlspecialchars($product["title"]) ?>">
                     <div class="imageContent">
                         <div class="imageTexts">
-                            <h2><?= htmlspecialchars($product["title"]) ?></h2>
+                            <h2 class="firstLetterUppercase"><?= htmlspecialchars($product["title"]) ?></h2>
                             <p class="imageTag"><?= htmlspecialchars($product["status"]) ?></p>
                         </div>
                     </div>
