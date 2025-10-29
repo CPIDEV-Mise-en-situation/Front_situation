@@ -21,19 +21,19 @@
                 <div class="infos">
                     <div class="divInfos">
                         <label for="name">Nom</label>
-                        <input type="text" name="name" id="name" class="textBox"/>
+                        <input type="text" name="name" id="name" class="textBox" required/>
                     </div>
                     <div class="divInfos">
                         <label for="surname">Prénom</label>
-                        <input type="text" name="surname" id="surname" class="textBox"/>
+                        <input type="text" name="surname" id="surname" class="textBox" required/>
                     </div>
                 </div>
                 <label for="location">Adresse</label>
-                <input type="text" name="location" id="location" class="textBox"/>
+                <input type="text" name="location" id="location" class="textBox" required/>
                 <label for="email">Mail</label>
-                <input type="email" name="email" id="email" class="textBox"/>
+                <input type="email" name="email" id="email" class="textBox" required/>
                 <label for="password">Mot de passe</label>
-                <input type="password" name="password" id="password" class="textBox"/>
+                <input type="password" name="password" id="password" class="textBox" required/>
                 <div class="buttonDiv">
                     <input type="submit" value="Inscription" class="button"/>
                 </div>
