@@ -12,6 +12,11 @@ $user_id = $_SESSION['user_id'];
 $user_email = $_SESSION['email'];
 $user_admin = $_SESSION['admin'];
 
+if($user_id == null){
+    header("Location: ./connexion.php");
+    exit;
+}
+
 if($user_admin == 1){
     header("Location: ./profil_admin.php");
     exit;
