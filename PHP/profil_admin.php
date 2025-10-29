@@ -10,12 +10,6 @@ session_start();
 
 $user_id = $_SESSION['user_id'];
 $user_email = $_SESSION['email'];
-$user_admin = $_SESSION['admin'];
-
-if($user_admin == 1){
-    header("Location: ./profil_admin.php");
-    exit;
-}
 ?>
 
 <!DOCTYPE html>
@@ -48,8 +42,7 @@ if($user_admin == 1){
     </header>
 
     <div>
-        <p><?= $user_email ?></p>
-        <p><?= $user_id ?></p>
+        
     </div>
 
     <footer id="footer">
