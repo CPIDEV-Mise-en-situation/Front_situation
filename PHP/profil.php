@@ -61,8 +61,8 @@ $reservation = $reqReservation->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <p>Vos commandes :</p>
 
-        <div>
-            <table border="1" cellspacing="0" cellpadding="8">
+        <div class="tableau_profile">
+            <table border="1" cellspacing="0" cellpadding="8" class="tableau">
                 <thead>
                     <tr>
                         <th>user_id</th>
