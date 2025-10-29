@@ -91,6 +91,10 @@
     .hamburger {
         display: block;
     }
+    .close-btn {
+        display: block;
+    }
+
     .header .nav {
         position: fixed;
         top: 0;
