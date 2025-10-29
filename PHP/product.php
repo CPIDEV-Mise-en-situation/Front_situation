@@ -1,4 +1,7 @@
 <?php
+session_start();
+$user_id = $_SESSION['id'] ?? null;
+
 require_once __DIR__ . '/config.php';
 
 $id = (int)$_GET['id'];
@@ -14,6 +17,7 @@ if (!$product) {
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/index.css">
@@ -23,6 +27,7 @@ if (!$product) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($product['title']) ?></title>
 </head>
+
 <body>
     <header class="header">
         <a href="../index.php">
@@ -32,8 +37,16 @@ if (!$product) {
             <div class="nav">
                 <ul>
                     <li><a href="shoplist.php">Produit</a></li>
-                    <li><a href="">Profil</a></li>
-                    <li><a href="connexion.php">Connexion</a></li>
+                    <?php
+
+                    if (isset($user_id)) {
+                        echo '<li><a href="profil.php">Profil</a></li>';
+                        echo '<li><a href="logout.php">Déconnexion</a></li>';
+                    } else {
+                        echo '<li><a href="connexion.php">Connexion</a></li>';
+                    }
+
+                    ?>
                 </ul>
             </div>
         </nav>
@@ -50,10 +63,19 @@ if (!$product) {
                 <p class="contentTag"><?= htmlspecialchars($product["status"]) ?></p>
             </div>
         </div>
-        
+
         <div class="ProductImage">
-          <img src="../IMG/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['title']) ?>" class="imageProduct">
-            <p class="orderTag">Réserver</p>
+            <img src="../IMG/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['title']) ?>" class="imageProduct">
+            <?php if (!empty($user_id)): ?>
+                <form action="reserve.php" method="post" class="pointer">
+                    <input type="hidden" name="product_id" value="<?= htmlspecialchars($product['id']) ?>">
+                    <input type="hidden" name="title_products" value="<?= htmlspecialchars($product['title']) ?>">
+                    <input type="hidden" name="desc_" value="<?= htmlspecialchars($product['desc_']) ?>">
+                    <button type="submit" class="orderTag">Réserver</button>
+                </form>
+            <?php else: ?>
+                <a href="connexion.php" class="orderTag">Connectez-vous pour réserver</a>
+            <?php endif; ?>
         </div>
 
     </div>
@@ -62,7 +84,9 @@ if (!$product) {
         <img src="../IMG/logo.png" alt="Logo" id="footer-icon">
         <div id="contact">
             <ul>
-                <li><p>Contact :</p></li>
+                <li>
+                    <p>Contact :</p>
+                </li>
                 <li><a href="">19 place du Duroc</a></li>
                 <li><a href="">54700 Pont-à-Monsson</a></li>
                 <li><a href="">+33 3 83 81 10 68</a></li>
@@ -75,8 +99,11 @@ if (!$product) {
                 <li><a href="">Gestion des cookies</a></li>
             </ul>
         </div>
-        <div id="equipe"><p>Team CPIDEV</p></div>
+        <div id="equipe">
+            <p>Team CPIDEV</p>
+        </div>
     </footer>
 
 </body>
+
 </html>

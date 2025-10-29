@@ -7,7 +7,7 @@
 
     try {
     // Préparer la requête pour récupérer l'utilisateur par email ou username
-    $stmt = $pdo->prepare("SELECT id, password FROM users WHERE email = ?");
+    $stmt = $pdo->prepare("SELECT id, password, name, surname, isadmin FROM users WHERE email = ?");
     $stmt->execute([$email]);
 
     // Vérifier si l'utilisateur existe
@@ -21,6 +21,7 @@
             $_SESSION['email'] = $email;
             $_SESSION['name'] = $user['name'];
             $_SESSION['surname'] = $user['surname'];
+            $_SESSION['admin'] = $user['isadmin'];
 
             header("Location: ../index.php");
             exit;

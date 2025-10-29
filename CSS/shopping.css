@@ -42,10 +42,6 @@
     text-align: center;
 }
 
-.imageTexts h2::first-letter {
-    text-transform: uppercase;
-}
-
 .imageTag {
     background-color: #00ff00;
     border-radius: 20px;

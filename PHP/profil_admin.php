@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 require_once __DIR__ . '/config.php';
 
@@ -7,13 +6,15 @@ $reqUsers = $pdo->prepare("SELECT * FROM users");
 $reqUsers->execute();
 $users = $reqUsers->fetchAll(PDO::FETCH_ASSOC);
 
-$reqProducts = $pdo->prepare("SELECT * FROM products");
-$reqProducts->execute();
-$products = $reqProducts->fetchAll(PDO::FETCH_ASSOC);
+$reqReserver = $pdo->prepare("SELECT * FROM reserver");
+$reqReserver->execute();
+$reserver = $reqReserver->fetchAll(PDO::FETCH_ASSOC);
 
-$user_id = $_SESSION['id'] ?? null;
+session_start();
+
+$user_id = $_SESSION['user_id'];
+$user_email = $_SESSION['email'];
 ?>
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,6 +26,7 @@ $user_id = $_SESSION['id'] ?? null;
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/shopping.css">
+    <link rel="stylesheet" href="../CSS/commande.css">
     <title>LendMairie</title>
 </head>
 
@@ -36,42 +38,42 @@ $user_id = $_SESSION['id'] ?? null;
         <nav id="navigation">
             <div class="nav">
                 <ul>
-                    <li><a href="shoplist.php">Produit</a></li>
-                    <?php 
-                    
-                    if (isset($user_id)) {
-                        echo '<li><a href="profil.php">Profil</a></li>';
-                        echo '<li><a href="logout.php">Déconnexion</a></li>';
-                    } else {
-                        echo '<li><a href="connexion.php">Connexion</a></li>';
-                    }
-
-                    ?>
+                    <li><a href="">Produit</a></li>
+                    <li><a href="">Profil</a></li>
+                    <li><a href="logout.php">Déconnexion</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <div>
-        <div class="cardContainer">
+    <div class="tableau_profile">
+        <table class="tableau">
             <?php
-        foreach ($products as $product) {
+        foreach($reserver as $reserver){
             ?>
-            <a href="product.php?id=<?= urlencode($product['id']) ?>" class="cardProductLink">
-                <div class="cardProduct">
-                    <img class="imageProduct" src="../IMG/<?= htmlspecialchars($product["image"]) ?>" alt="<?= htmlspecialchars($product["title"]) ?>" title="<?= htmlspecialchars($product["title"]) ?>">
-                    <div class="imageContent">
-                        <div class="imageTexts">
-                            <h2 class="firstLetterUppercase"><?= htmlspecialchars($product["title"]) ?></h2>
-                            <p class="imageTag"><?= htmlspecialchars($product["status"]) ?></p>
-                        </div>
-                    </div>
-                </div>
-            </a>
+
+            <tr>
+                <td>
+                    <?= htmlspecialchars($reserver["id_user"]) ?>
+                </td>
+
+                <td>
+                    <?= htmlspecialchars($reserver["title_products"]) ?>
+                </td>
+
+                <td>
+                    <?= htmlspecialchars($reserver["date_"]) ?>
+                </td>
+
+                <td>
+                    <?= htmlspecialchars($reserver["status"]) ?>
+                </td>
+            </tr>
+                
             <?php
         }
-        ?>
-        </div>
+            ?>
+        </table>
     </div>
 
     <footer id="footer">

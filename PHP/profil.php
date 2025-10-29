@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once __DIR__ . '/config.php';
 
@@ -6,10 +7,14 @@ $reqUsers = $pdo->prepare("SELECT * FROM users");
 $reqUsers->execute();
 $users = $reqUsers->fetchAll(PDO::FETCH_ASSOC);
 
-session_start();
-
 $user_id = $_SESSION['id'];
-$user_email = $_SESSION['mail'];
+$user_name = $_SESSION['nom'];
+$user_surname = $_SESSION['prenom'];
+
+$reqReservation = $pdo->prepare("SELECT * FROM reserver WHERE id_user = $user_id");
+$reqReservation->execute();
+$reservation = $reqReservation->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +26,7 @@ $user_email = $_SESSION['mail'];
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/header.css">
-    <link rel="stylesheet" href="../CSS/shopping.css">
+    <link rel="stylesheet" href="../CSS/profil.css">
     <title>LendMairie</title>
 </head>
 
@@ -33,18 +38,63 @@ $user_email = $_SESSION['mail'];
         <nav id="navigation">
             <div class="nav">
                 <ul>
-                    <li><a href="">Produit</a></li>
-                    <li><a href="">Profil</a></li>
-                    <li><a href="PHP/connexion.php">Connexion</a></li>
+                    <li><a href="shoplist.php">Produit</a></li>
+                    <?php 
+                    
+                    if (isset($user_id)) {
+                        echo '<li><a href="profil.php">Profil</a></li>';
+                        echo '<li><a href="logout.php">Déconnexion</a></li>';
+                    } else {
+                        echo '<li><a href="connexion.php">Connexion</a></li>';
+                    }
+
+                    ?>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <div>
-        <p><?= $user_email ?></p>
-        <p><?= $user_id ?></p>
+    <div class="profilContainer">
+        <div class="userName">
+            <p class="firstLetterUppercase"><?= $user_name ?></p>
+            <p class="firstLetterUppercase"><?= $user_surname ?></p>
+        </div>
+        <p>Vos commandes :</p>
+
+        <div class="tableau_profile">
+            <table border="1" cellspacing="0" cellpadding="8" class="tableau">
+                <thead>
+                    <tr>
+                        <th>user_id</th>
+                        <th>product_id</th>
+                        <th>product_title</th>
+                        <th>desc_</th>
+                        <th>status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <?php
+                        if (!empty($reservation)) {
+                            foreach ($reservation as $item) {
+                                echo '<tr>';
+                                echo '<td>' . htmlspecialchars($item['id_user']) . '</td>';
+                                echo '<td>' . htmlspecialchars($item['id_product']) . '</td>';
+                                echo '<td>' . htmlspecialchars($item['title_products']) . '</td>';
+                                echo '<td>' . nl2br(htmlspecialchars($item['desc_'])) . '</td>';
+                                echo '<td>' . htmlspecialchars($item['status']) . '</td>';
+                                echo '</tr>';
+                            }
+                        } else {
+                            echo '<tr><td colspan="5">Aucune réservation trouvée.</td></tr>';
+                        }
+                        ?>
+                </tbody>
+            </table>
+        </div>
     </div>
+
+
 
     <footer id="footer">
         <img src="../IMG/logo.png" alt="Logo" id="footer-icon">
