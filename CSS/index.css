@@ -153,27 +153,30 @@ body {
     padding: 10px;
     width: 50%;
     height: 450px;
-    background: var(--maps-bg);
-    border-radius: var(--border-radius);
-    box-shadow: var(--glass-shadow), var(--glass-inset-shadow);
-    border: var(--glass-border);
-    backdrop-filter: blur(var(--glass-blur)) saturate(180%);
     transition: var(--transition);
     overflow: hidden;
 }
 
-.maps:hover {
+/* .maps:hover {
     backdrop-filter: blur(var(--glass-blur-hover)) saturate(200%);
     border: var(--glass-border-hover);
     box-shadow: var(--glass-shadow-hover), var(--glass-inset-shadow);
     transform: translateY(-2px);
-}
+} */
 
 .maps iframe {
     width: 100%;
     height: 100%;
-    border: var(--glass-border);
+    border: var(--glass-border-lg);
+    transition: var(--transition);
     border-radius: 12px;
+}
+
+.maps iframe:hover {
+    backdrop-filter: blur(var(--glass-blur-hover)) saturate(200%);
+    border: var(--glass-border-lg-hover);
+    box-shadow: var(--glass-shadow-hover), var(--glass-inset-shadow);
+    transform: translateY(-2px);
 }
 
 /* Section À propos */

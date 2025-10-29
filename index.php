@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="./CSS/footer.css">
     <link rel="stylesheet" href="./CSS/header.css">
     <link rel="stylesheet" href="./CSS/root.css">
+    <link rel="shortcut icon" href="./IMG/little-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <title>Mairie - PAM</title>
+    <title>La Mairie de Verdun</title>
 </head>
 <body>
     <header class="header">
@@ -147,23 +148,25 @@
 
     <!-- Pied de page -->
     <footer id="footer">
-        <img src="./IMG/logo.png" alt="Logo" id="footer-icon">
-        <div id="contact">
-            <ul>
-                <li><p>Contact :</p></li>
-                <li><a href="">19 place du Duroc</a></li>
-                <li><a href="">54700 Pont-à-Monsson</a></li>
-                <li><a href="">+33 3 83 81 10 68</a></li>
-            </ul>
-        </div>
-        <div id="infos">
-            <ul>
-                <li><a href="">Mentions légales</a></li>
-                <li><a href="">Accessibilité</a></li>
-                <li><a href="">Gestion des cookies</a></li>
-            </ul>
-        </div>
-        <div id="equipe"><p>Team CPIDEV</p></div>
+        <div class="contenair">
+            <img src="./IMG/logo.png" alt="Logo" id="footer-icon">
+            <div id="contact">
+                <ul>
+                    <li><p>Contact :</p></li>
+                    <li><a href="">11 r Prés Poincaré,</a></li>
+                    <li><a href="">55100 Verdun</a></li>
+                    <li><a href="">+33 03 29 83 44 22</a></li>
+                </ul>
+            </div>
+            <div id="infos">
+                <ul>
+                    <li><a href="">Mentions légales</a></li>
+                    <li><a href="">Accessibilité</a></li>
+                    <li><a href="">Gestion des cookies</a></li>
+                </ul>
+            </div>
+            <div id="equipe"><p>Team CPIDEV</p></div>
+            </div>
     </footer>
 
     <!-- SVG pour l'effet de distortion (Liquid Glass) -->
