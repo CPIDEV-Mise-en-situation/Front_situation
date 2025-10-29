@@ -250,4 +250,4 @@ Projet pédagogique. Les images et médias sont utilisés à titre d’exemple o
 📬 CONTACT
 =========
 
-Pour toute question : thibault.vuillaume@etu.supdevinci.fr ✉️
+Pour toute question : vuillaume.thibault55@gmail.com ✉️
