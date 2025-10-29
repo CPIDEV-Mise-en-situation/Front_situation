@@ -19,9 +19,9 @@
             <h1>Connexion: </h1>
             <form id="loginForm" action="./connexion_process.php" method="post">
                 <label for="email">Mail</label>
-                <input type="email" name="email" id="email" class="textBox"/>
+                <input type="email" name="email" id="email" class="textBox" required/>
                 <label for="password">Mot de passe</label>
-                <input type="password" name="password" id="password" class="textBox"/>
+                <input type="password" name="password" id="password" class="textBox" required/>
                 <div class="buttonDiv">
                     <input type="submit" value="Connexion" class="button"/>
                 </div>

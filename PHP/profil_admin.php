@@ -6,21 +6,14 @@ $reqUsers = $pdo->prepare("SELECT * FROM users");
 $reqUsers->execute();
 $users = $reqUsers->fetchAll(PDO::FETCH_ASSOC);
 
+$reqReserver = $pdo->prepare("SELECT * FROM reserver");
+$reqReserver->execute();
+$reserver = $reqReserver->fetchAll(PDO::FETCH_ASSOC);
+
 session_start();
 
 $user_id = $_SESSION['user_id'];
 $user_email = $_SESSION['email'];
-$user_admin = $_SESSION['admin'];
-
-if($user_id == null){
-    header("Location: ./connexion.php");
-    exit;
-}
-
-if($user_admin == 1){
-    header("Location: ./profil_admin.php");
-    exit;
-}
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +26,7 @@ if($user_admin == 1){
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/shopping.css">
+    <link rel="stylesheet" href="../CSS/commande.css">
     <title>LendMairie</title>
 </head>
 
@@ -52,9 +46,34 @@ if($user_admin == 1){
         </nav>
     </header>
 
-    <div>
-        <p><?= $user_email ?></p>
-        <p><?= $user_id ?></p>
+    <div class="tableau_profile">
+        <table class="tableau">
+            <?php
+        foreach($reserver as $reserver){
+            ?>
+
+            <tr>
+                <td>
+                    <?= htmlspecialchars($reserver["id_user"]) ?>
+                </td>
+
+                <td>
+                    <?= htmlspecialchars($reserver["title_products"]) ?>
+                </td>
+
+                <td>
+                    <?= htmlspecialchars($reserver["date_"]) ?>
+                </td>
+
+                <td>
+                    <?= htmlspecialchars($reserver["status"]) ?>
+                </td>
+            </tr>
+                
+            <?php
+        }
+            ?>
+        </table>
     </div>
 
     <footer id="footer">
