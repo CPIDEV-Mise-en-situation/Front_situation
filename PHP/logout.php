@@ -2,6 +2,6 @@
     session_start();
     session_unset(); // supprime toutes les variables de session
     session_destroy(); // détruit la session
-    header("Location:  /mairie/PHP/connexion.php"); // redirection après déconnexion
-exit
+    header("Location: /Front_situation/index.php"); // redirection après déconnexion
+    exit;
 ?>

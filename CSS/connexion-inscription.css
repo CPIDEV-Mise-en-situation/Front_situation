@@ -4,7 +4,6 @@ img{
 }
 
 #logo{
-    width: 167px;
     height: 167px;
     padding-left: 10%;
 }
@@ -85,6 +84,12 @@ form{
     background: linear-gradient(0.25turn, #007E13, #00DE13);
     color: white;
     margin-bottom: 10%;
+    transition: 0.8s;
+}
+
+.button:hover{
+    transform: scale(0.8);
+    transition: 0.8s;
 }
 
 .infos{
